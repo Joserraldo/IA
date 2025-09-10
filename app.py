@@ -51,15 +51,16 @@ if st.button("Enviar"):
         url_img = "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/87/19/b7.jpg"
         response = requests.get(url_img)
         img = Image.open(BytesIO(response.content))
-        st.image(img, use_column_width=True)
+        st.image(img, use_container_width=True)
     else:
         st.error("La persona probablemente **NO comprará** la bicicleta.")
         # Imagen de no compra
         url_img = "https://as2.ftcdn.net/jpg/00/29/89/87/1000_F_29898774_n0Txc82krUH4IYpjXGuiCGKl7DKpRaH5.jpg"
         response = requests.get(url_img)
         img = Image.open(BytesIO(response.content))
-        st.image(img, use_column_width=True)
+        st.image(img, use_container_width=True)
 
 # --- Footer ---
 st.markdown("<hr>", unsafe_allow_html=True)
 st.markdown("© Derechos reservados Unab 2025", unsafe_allow_html=True)
+
